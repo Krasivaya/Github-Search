@@ -1,0 +1,26 @@
+<!-- Search -->
+<div>
+  <input 
+    class="form-control" 
+    placeholder="Enter Username" 
+    #newUser 
+    (keyup.enter)="addUser(newUser.value)">
+  <button class="btn btn-secondary" (click)="addUser(newUser.value)">Search</button>
+  <p>{{username}}</p>
+</div>
+<!-- User Info -->
+<div><br>
+  <p>Profile <img width="5%" src="{{user.profile}}"></p>
+  <p>Name: {{user.name}}</p>
+  <p>Followers: {{user.follower}}</p>
+  <p>Following: {{user.following}}</p>
+  <p>Joined: {{user.joined|date}}</p>
+  <button (click)='goToUrl(repo/details)'>Repo(s): {{user.repo}}</button>
+</div>
+<!-- Repo Info -->
+<div><br>
+  <p>Repo - Name: <a href="{{repo.html}}">{{repo.repoName}}</a></p>
+  <p>Repo - Description: {{repo.description}}</p>
+  <p>Repo - Language(s): {{repo.language}}</p>
+  </div>
+  
