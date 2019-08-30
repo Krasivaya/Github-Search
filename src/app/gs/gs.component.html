@@ -1,26 +1,80 @@
-<!-- Search -->
-<div>
-  <input 
-    class="form-control" 
-    placeholder="Enter Username" 
-    #newUser 
-    (keyup.enter)="addUser(newUser.value)">
-  <button class="btn btn-secondary" (click)="addUser(newUser.value)">Search</button>
-  <p>{{username}}</p>
-</div>
-<!-- User Info -->
-<div><br>
-  <p>Profile <img width="5%" src="{{user.profile}}"></p>
-  <p>Name: {{user.name}}</p>
-  <p>Followers: {{user.follower}}</p>
-  <p>Following: {{user.following}}</p>
-  <p>Joined: {{user.joined|date}}</p>
-  <button (click)='goToUrl(repo/details)'>Repo(s): {{user.repo}}</button>
-</div>
-<!-- Repo Info -->
-<div><br>
-  <p>Repo - Name: <a href="{{repo.html}}">{{repo.repoName}}</a></p>
-  <p>Repo - Description: {{repo.description}}</p>
-  <p>Repo - Language(s): {{repo.language}}</p>
-  </div>
-  
+<!DOCTYPE html>
+<html>
+  <head></head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <a class="navbar-brand" href="#">Github Search</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+                    <!-- Search -->
+        <div class="jumbotron">
+            <h1 class="display-3">Welcome to Github Search</h1>
+            <input class="form-control" placeholder="Enter Username" #newUser (keyup.enter)="addUser(newUser.value)"/>
+            <button class="btn btn-secondary" (click)="addUser(newUser.value)">Search</button>
+        </div>
+      <br><br>
+      <h1>Github Search</h1>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+                    <!-- User Info -->
+          <div>
+            <br />
+            <img width="30%" src="{{ user.profile }}" />
+            <p>Name: {{ user.name }}</p>
+            <p>Followers: {{ user.follower }}</p>
+            <p>Following: {{ user.following }}</p>
+            <p>Joined: {{ user.joined | date }}</p>
+            <button (click)="goToUrl(repo / details)" class="btn btn-outline-secondary">Repo(s): {{ user.repo }}</button>
+          </div>
+          <!-- <div class="row">
+          </div> -->
+        </div>
+        <div class="col-md-6">
+                    <!-- Repo Info -->
+            <div>
+              <br />
+              <p>
+                Repo - Name: <a href="{{ repo.html }}">{{ repo.repoName }}</a>
+              </p>
+              <p>Repo - Description: {{ repo.description }}</p>
+              <p>Repo - Language(s): {{ repo.language }}</p>
+            </div>
+        </div>
+      </div>
+
+        <div class="card-columns">
+          <div >
+            <div class="card">
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header purple-gradient">
+        
+                <!-- Title -->
+                <h4 class="card-header-title"> name</h4>
+                <!-- Subtitle -->
+                <h5 class="mb-0 pb-3 pt-2"> description </h5>
+                
+                <h6 class="mb-0 pb-3 pt-2"> html </h6>
+                <h6 class="mb-0 pb-3 pt-2"> join </h6>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

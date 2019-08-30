@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  key: "528312506f927938bff8a6bed2b8e43fac321ca1"
+  key: "aab192904e54b12ce74b655a5d009bf54ec0ae3f"
 };
