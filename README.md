@@ -1,6 +1,7 @@
 # GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+### Developed By
+[Carine I. SEMWAGA](https://github.com/Krasivaya)
 
 ## Development server
 
