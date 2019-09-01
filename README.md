@@ -10,12 +10,13 @@ description and the language(s) used.
 
 ### Technologies Used
 
-1. Angular 6.
-2. Typescript and JavaScript. 
-3. CSS & Bootsrap.
-4. HTML.
-5. Git version control.
-6. Github API.
+1. Angular CLI
+2. Angular 6
+3. Typescript and JavaScript 
+4. HTML
+5. CSS & Bootsrap
+6. Git Control
+7. Github API
 
 ### Setup/Installation Requirements
 
