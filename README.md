@@ -12,8 +12,8 @@ description and the language(s) used.
 
 1. Angular 6.
 2. Typescript and JavaScript. 
-3. CSS & Bootsrap.
-4. HTML.
+3. CSS & Bootsrap.HTML.
+4. 
 5. Git version control.
 6. Github API.
 
