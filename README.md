@@ -3,6 +3,12 @@
 ### Developed By
 [Carine I. SEMWAGA](https://github.com/Krasivaya)
 
+### Description
+his is an Angular application that allows a user to input their username into a form 
+and be able to see a brief summary of their profile, and a list of their repos with 
+description and the language(s) used.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
