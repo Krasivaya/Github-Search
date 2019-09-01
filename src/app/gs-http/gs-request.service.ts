@@ -23,7 +23,8 @@ export class GsRequestService {
       // public_repos: number;
       // html_url:any;
     }
-    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"?access_token="+(environment.key))
+    // return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"?access_token="+(environment.key))
+    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"?access_token=c029c1966cc4eabb25bd7aab969d220d68d548d4")
   }
   updateUser(newUser:string) {
     this.newUser = newUser;
@@ -35,6 +36,7 @@ export class GsRequestService {
       // language: string;
       // html_url: any;
     }
-    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token="+(environment.key))
+    // return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token="+(environment.key))
+    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token=c029c1966cc4eabb25bd7aab969d220d68d548d4")
   }
 }
