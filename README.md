@@ -13,7 +13,7 @@ description and the language(s) used.
 1. Angular 6.
 2. HTML.
 3. CSS & Bootsrap.
-4. JavaScript and Typescript.
+4.  and TypescriptJavaScript.
 5. Git version control.
 6. Github API.
 
