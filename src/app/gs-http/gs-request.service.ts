@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-// import { environment } from "src/environments/environment";
+import { environment } from "src/environments/environment";
 import { User } from "../gs-user-class/user";
 import { Repo } from '../gs-repo-class/repo';
 
@@ -23,8 +23,7 @@ export class GsRequestService {
       // public_repos: number;
       // html_url:any;
     }
-    // return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"?access_token="+(environment.key))
-    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"?access_token=e80cb3652823dadf253c3f12792ab124a1ea141d")
+    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"?access_token="+(environment.key))
   }
   updateUser(newUser:string) {
     this.newUser = newUser;
@@ -36,7 +35,6 @@ export class GsRequestService {
       // language: string;
       // html_url: any;
     }
-    // return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token="+(environment.key))
-    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token=e80cb3652823dadf253c3f12792ab124a1ea141d")
+    return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token="+(environment.key))
   }
 }
