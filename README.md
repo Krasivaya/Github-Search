@@ -36,4 +36,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ### License
 This project is under the [MIT](https://github.com/nignanthomas/github/blob/master/LICENSE) license.
 
-### Copyright (c) 2019 Carine I. SEMWAGA.
+##### Copyright (c) 2019 Carine I. SEMWAGA.
