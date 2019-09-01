@@ -11,9 +11,9 @@ description and the language(s) used.
 ### Technologies Used
 
 1. Angular 6.
-2. HTML.Typescript 
+2. HTML.Typescript and 
 3. CSS & Bootsrap.
-4. and JavaScript.
+4. JavaScript.
 5. Git version control.
 6. Github API.
 
