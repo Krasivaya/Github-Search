@@ -5,6 +5,7 @@ export class User {
     public follower:number,
     public following:number,
     public joined:Date,
-    public repo:number
+    public repo:number,
+    public html_url: any,
   ){}
 }

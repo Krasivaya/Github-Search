@@ -1,26 +1,70 @@
-<!-- Search -->
-<div>
-  <input 
-    class="form-control" 
-    placeholder="Enter Username" 
-    #newUser 
-    (keyup.enter)="addUser(newUser.value)">
-  <button class="btn btn-secondary" (click)="addUser(newUser.value)">Search</button>
-  <p>{{username}}</p>
-</div>
-<!-- User Info -->
-<div><br>
-  <p>Profile <img width="5%" src="{{user.profile}}"></p>
-  <p>Name: {{user.name}}</p>
-  <p>Followers: {{user.follower}}</p>
-  <p>Following: {{user.following}}</p>{{repo.repoName}}
-  <p>Joined: {{user.joined|date}}</p>
-  <button>Repo(s): {{user.repo}}</button>
-</div>
-<!-- Repo Info -->
-<div><br>
-  <p>Repo - Name: <a href="{{repo.html}}"></a></p>
-  <p>Repo - Description: {{repo.description}}</p>
-  <p>Repo - Language(s): {{repo.language}}</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="../../assets/a2.png" >
+  </head>
+<body>
+  <div class="container"><br><br><br>
+                  <!-- Search -->
+    <div class="jumbotron">
+      <h1 class="display-3">Welcome to Github Search</h1>
+      <input class="form-control" placeholder="Enter Username" [(ngModel)]='newUser' (keyup)="addNew()"/><br>
+      <button class="btn btn-secondary" (click)="addNew()">Search</button>
+    </div>
+    <div *ngIf="gs" class="hideSeek"> 
+      <h1 class="heading1">Github Search</h1>
+      <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+                    <!-- User Info -->
+          <div>
+            <h3 class="panel-title">User:</h3><hr>
+            <br />
+            <img width="30%" src="{{ gs.avatar_url }}"/>
+            <br>
+            <ul class="list-group">
+                <li appCool class="list-group-item d-flex justify-content-between align-items-center">
+                  Name:
+                  <span class="badge badge-secondary badge-pill">{{ gs.login }}</span>
+                </li>
+                <li appCool class="list-group-item d-flex justify-content-between align-items-center">
+                  Followers:
+                  <span class="badge badge-secondary badge-pill">{{ gs.followers }}</span>
+                </li>
+                <li appCool class="list-group-item d-flex justify-content-between align-items-center">
+                  Following:
+                  <span class="badge badge-secondary badge-pill">{{ gs.following }}</span>
+                </li>
+                <li appCool class="list-group-item d-flex justify-content-between align-items-center">
+                  Repo(s):
+                  <span class="badge badge-secondary badge-pill">{{ gs.public_repos }}</span>
+                </li>
+                <li appCool class="list-group-item d-flex justify-content-between align-items-center">
+                  Joined:
+                  <span class="badge badge-secondary badge-pill">{{ gs.created_at | joined }} day(s) ago</span>
+                </li>
+              </ul><br>
+            <p><a href="{{gs.html_url}}" target="blank" class="btn btn-outline-secondary">View profile on github</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+                    <!-- Repo Info -->
+          <h3 class="panel-title">Repositories:</h3><hr>
+          <div *ngFor='let repo of repos'>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+              <div class="card-header"><h4><a class="link" href="{{ repo.html_url }}" target="blank">{{ repo.name }}</a></h4></div>
+              <div class="card-body">
+                <h6 class="card-title">{{ repo.description }}</h6>
+                <h5 class="card-text">{{ repo.language }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
+  </body>
+</html>
