@@ -4,9 +4,27 @@
 [Carine I. SEMWAGA](https://github.com/Krasivaya)
 
 ### Description
-his is an Angular application that allows a user to input their username into a form 
+This is an Angular application that allows a user to input their username into a form 
 and be able to see a brief summary of their profile, and a list of their repos with 
 description and the language(s) used.
+
+### Technologies Used
+
+1. Angular 6.
+2. HTML.
+3. CSS & Bootsrap.
+4. JavaScript and Typescript.
+5. Git version control.
+6. Github API.
+
+### Setup/Installation Requirements
+
+* Open your terminal
+* initialize github, git clone https://github.com/Krasivaya/Github-search.git
+* cd Github-Search
+* open folder in prefered IDE
+* open terminal
+* run "ng serve" to open the application in your localhost
 
 
 ## Development server
