@@ -28,7 +28,7 @@ description and the language(s) used.
 * run "ng serve" to open the application in your localhost
 
 ### Known Bugs
-Token Access is a bit messed up!
+No bug known. If you found any please contact!
 
 ### Live site
 [Github-Search](https://Krasivaya.github.io/Github-Search/)
